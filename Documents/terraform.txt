@@ -1,0 +1,31 @@
+Init
+
+Validate
+
+Plan
+
+Apply
+
+Destroy
+
+
+HCL-Hashicorp Language
+
+
+1.Blocks  
+  a)Top Level Blocks
+	i)resource blocks
+	ii)terraform blocks
+	iii)provider blocks
+	
+  b)Block inside blocks
+
+
+
+2.Arguments
+
+3.Identifiers
+
+4.comments
+	a) # --single line comments
+	b) /* */ ---Multiline comments
