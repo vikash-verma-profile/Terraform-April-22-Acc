@@ -14,9 +14,14 @@ HCL-Hashicorp Language
 
 1.Blocks  
   a)Top Level Blocks
+  ===Fundamental blocks
 	i)resource blocks
 	ii)terraform blocks
 	iii)provider blocks
+  ===Variable blocks
+	iv)Input variable block
+	v)output value block
+	vi)Local Value block
 	
   b)Block inside blocks
 

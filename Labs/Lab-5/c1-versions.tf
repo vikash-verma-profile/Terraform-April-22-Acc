@@ -13,11 +13,3 @@ provider "aws" {
   profile = "default"
 }
 
-resource "aws_instance" "my-ec2-vm1" {
-  ami=var.ec2_ami_id
-  instance_type = "t2.micro"
-  count = var.ec2_instace_count
-  tags = {
-    "Name" = "myec2vm"
-  }
-}
