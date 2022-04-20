@@ -22,7 +22,11 @@ HCL-Hashicorp Language
 	iv)Input variable block
 	v)output value block
 	vi)Local Value block
-	
+	===Meta-Aruguments
+		-count
+		-depends_on
+		-for_each
+		-lifecycle
   b)Block inside blocks
 
 
