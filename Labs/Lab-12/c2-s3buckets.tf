@@ -17,7 +17,27 @@
 
 #toset for set of strings
 resource "aws_iam_user" "users" {
-  for_each = toset([ "Vikash1" , "Vikash2" , "Vikash3" ])
-  name = each.key
+  #for_each = toset([ "Vikash1" , "Vikash2" , "Vikash3" ])
+  name = "Vikash1"
 }
 
+
+resource "aws_iam_user_policy" "test_policy" {
+  name   = "test-policy"
+  user   = aws_iam_user.users.name
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+ EOF
+}
