@@ -13,3 +13,8 @@ provider "aws" {
   profile = "default"
 }
 
+# output "s3_name" {
+#   description="s3name"
+#   value = aws_s3_bucket.mys3bucket.bucket
+# }
+
