@@ -15,17 +15,23 @@
 #     # }
 # }
 
+locals {
+  users=toset([ "Vikash1" , "Vikash2" , "Vikash3" ])
+}
 #toset for set of strings
 resource "aws_iam_user" "users" {
-  #for_each = toset([ "Vikash1" , "Vikash2" , "Vikash3" ])
-  name = "Vikash1"
+  for_each = local.users
+  name = each.key
 }
 
 
 resource "aws_iam_user_policy" "test_policy" {
+depends_on = [
+  aws_iam_user.users
+]
+ for_each = local.users
   name   = "test-policy"
-  user   = aws_iam_user.users.name
-
+  user   = "${each.key}" #"vikash"
   policy = <<EOF
 {
   "Version": "2012-10-17",
