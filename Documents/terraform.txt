@@ -26,7 +26,11 @@ HCL-Hashicorp Language
 		-count
 		-depends_on
 		-for_each
-		-lifecycle
+		-lifecycle--
+			-CreatebeforeDestroy
+			-preventdestroy
+			-ignorechanges
+		-provsioner and connections
   b)Block inside blocks
 
 
