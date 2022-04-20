@@ -16,6 +16,7 @@ resource "aws_launch_configuration" "autoscaling-launch-Configuration" {
   name_prefix = "autoscaling-launch-Configuration"
   image_id = var.ec2_ami_id
   instance_type = var.instance_type
+  key_name = "terraform-key"
   security_groups = [aws_security_group.dev-vpc-sg.id]
   #count=2
 }
