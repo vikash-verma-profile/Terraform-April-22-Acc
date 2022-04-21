@@ -8,6 +8,7 @@ resource "azurerm_linux_virtual_machine" "mylinuxvm" {
   admin_username = "azureuser"
   network_interface_ids = [azurerm_network_interface.myvmnic.id]
   admin_password = "Levelup@007"
+  custom_data = filebase64("/app-scripts/script.txt")
   os_disk {
     name="osdisk"
     caching = "ReadWrite"
