@@ -1,6 +1,6 @@
 resource "aws_security_group" "dev-ssh" {
-  name        = "dev-ssh"
-  description = "dev ssh"
+  name        = "dev-ssh-1"
+  description = "dev-ssh-1"
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
     description = "allow port 22"

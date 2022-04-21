@@ -32,4 +32,5 @@ resource "azurerm_linux_virtual_machine" "mylinuxvm" {
     destination = "/tmp/index.html"
   }
 
+
 }
