@@ -4,6 +4,7 @@ resource "aws_instance" "my-ec2-vm" {
   instance_type          = "t2.micro"
   key_name               = "terraform-key"
   vpc_security_group_ids = [aws_security_group.dev-ssh.id]
+  user_data = file("apache-install.sh")
   tags = {
     "Name" = "web-4"
   }
