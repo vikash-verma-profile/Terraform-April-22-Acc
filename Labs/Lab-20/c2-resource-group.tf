@@ -1,4 +1,8 @@
+variable "environment" {
+  type=string
+  description = "Please enter environment"
+}
 resource "azurerm_resource_group" "myrg" {
- name="${data.azurerm_resource_group.rgds.name}-1"
+ name=(var.environment=="Dev")?"myrg-dev" :"myrg-prod"
  location = "East Us"
 }
