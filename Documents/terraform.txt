@@ -31,6 +31,9 @@ HCL-Hashicorp Language
 			-preventdestroy
 			-ignorechanges
 		-provsioner and connections
+			-file provsioner==>place any file on remote machine  local machine ==>remote machine ---Cloud resource
+			-remote-exec provsioner=>exec any command on remote machine
+			-local-exec provsioner=>exec any command on your local machine --the machine that is running terraform
   b)Block inside blocks
 
 
