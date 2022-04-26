@@ -45,3 +45,6 @@ HCL-Hashicorp Language
 4.comments
 	a) # --single line comments
 	b) /* */ ---Multiline comments
+	
+	
+Terraform datasources
